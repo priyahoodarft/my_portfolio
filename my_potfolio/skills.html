@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Technical and teaching skills of Priya Hooda — AI, web development, tools and more." />
+  <meta name="author" content="Priya Hooda" />
+  <title>Skills | Priya Hooda</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="preloader"><div class="loader"></div></div>
+  <div class="bg-blobs"><span></span><span></span><span></span></div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Priya<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-hero reveal">
+      <h1>My Skills</h1>
+      <p>A blend of engineering expertise and teaching tools that help me deliver impact.</p>
+    </section>
+
+    <section class="section">
+      <div class="grid grid-3">
+        <div class="card skill-card reveal">
+          <h3>HTML</h3>
+          <div class="progress"><span data-width="95"></span></div>
+        </div>
+        <div class="card skill-card reveal">
+          <h3>CSS</h3>
+          <div class="progress"><span data-width="92"></span></div>
+        </div>
+        <div class="card skill-card reveal">
+          <h3>JavaScript</h3>
+          <div class="progress"><span data-width="88"></span></div>
+        </div>
+        <div class="card skill-card reveal">
+          <h3>Python</h3>
+          <div class="progress"><span data-width="90"></span></div>
+        </div>
+        <div class="card skill-card reveal">
+          <h3>AI Tools</h3>
+          <div class="progress"><span data-width="93"></span></div>
+        </div>
+        <div class="card skill-card reveal">
+          <h3>Canva</h3>
+          <div class="progress"><span data-width="85"></span></div>
+        </div>
+        <div class="card skill-card reveal">
+          <h3>Git &amp; GitHub</h3>
+          <div class="progress"><span data-width="87"></span></div>
+        </div>
+        <div class="card skill-card reveal">
+          <h3>MS Office</h3>
+          <div class="progress"><span data-width="90"></span></div>
+        </div>
+        <div class="card skill-card reveal">
+          <h3>Machine Learning</h3>
+          <div class="progress"><span data-width="86"></span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><p>&copy; <span id="year"></span> Priya Hooda. All rights reserved.</p></div>
+  </footer>
+  <button class="scroll-top" aria-label="Scroll to top">↑</button>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Priya Hooda — AI Engineer & AI Trainer. Send a message or connect on social media." />
+  <meta name="author" content="Priya Hooda" />
+  <title>Contact | Priya Hooda</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="preloader"><div class="loader"></div></div>
+  <div class="bg-blobs"><span></span><span></span><span></span></div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Priya<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-hero reveal">
+      <h1>Contact Me</h1>
+      <p>Have a project, role, or question? Let's connect.</p>
+    </section>
+
+    <section class="section">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="info-item">
+            <div class="icon">✉</div>
+            <div><h4>Email</h4><p>priya.hooda@example.com</p></div>
+          </div>
+          <div class="info-item">
+            <div class="icon">📞</div>
+            <div><h4>Phone</h4><p>+91 98765 43210</p></div>
+          </div>
+          <div class="info-item">
+            <div class="icon">📍</div>
+            <div><h4>Location</h4><p>India</p></div>
+          </div>
+          <div class="info-item">
+            <div class="icon">in</div>
+            <div><h4>LinkedIn</h4><p>linkedin.com/in/priya-hooda</p></div>
+          </div>
+          <div class="info-item">
+            <div class="icon">GH</div>
+            <div><h4>GitHub</h4><p>github.com/priya-hooda</p></div>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your name" />
+              <span class="error-msg"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="you@example.com" />
+              <span class="error-msg"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" placeholder="+91 00000 00000" />
+              <span class="error-msg"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Write your message..."></textarea>
+              <span class="error-msg"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <div class="form-success">✅ Thank you! Your message has been sent successfully.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><p>&copy; <span id="year"></span> Priya Hooda. All rights reserved.</p></div>
+  </footer>
+  <button class="scroll-top" aria-label="Scroll to top">↑</button>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/script.js"></script>
+</body>
+</html>

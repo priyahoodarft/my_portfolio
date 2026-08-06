@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Priya Hooda — AI Engineer and AI Trainer with a passion for education and applied AI." />
+  <meta name="author" content="Priya Hooda" />
+  <title>About | Priya Hooda</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="preloader"><div class="loader"></div></div>
+  <div class="bg-blobs"><span></span><span></span><span></span></div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Priya<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-hero reveal">
+      <h1>About Me</h1>
+      <p>Get to know the person behind the code — my journey, values, and vision.</p>
+    </section>
+
+    <section class="section">
+      <div class="about-grid reveal">
+        <img src="assets/images/profile.png" alt="Priya Hooda" onerror="this.src='https://placehold.co/420x500/6c5ce7/ffffff?text=Priya+Hooda'" />
+        <div class="about-text">
+          <h2>AI Engineer &amp; Trainer on a mission to democratize AI</h2>
+          <p>
+            I am Priya Hooda, an AI Engineer and AI Trainer dedicated to building
+            intelligent solutions and empowering the next generation of tech
+            professionals. My work blends hands-on engineering with practical
+            teaching.
+          </p>
+          <p>
+            From developing machine learning models to designing AI curricula for
+            schools and colleges, I thrive at the intersection of technology and
+            education. I believe learning should be accessible, applied, and fun.
+          </p>
+          <p>
+            When I'm not training models or students, you'll find me exploring new
+            AI tools, contributing to open source, and creating visual content with
+            Canva.
+          </p>
+          <a href="assets/resume/Priya_Hooda_Resume.pdf" download class="btn btn-primary">⬇ Download Resume</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><p>&copy; <span id="year"></span> Priya Hooda. All rights reserved.</p></div>
+  </footer>
+  <button class="scroll-top" aria-label="Scroll to top">↑</button>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/script.js"></script>
+</body>
+</html>
