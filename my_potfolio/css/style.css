@@ -66,6 +66,12 @@ img {
   max-width: 100%;
   display: block;
 }
+/* Graceful fallback for missing/invalid images */
+img::after {
+  content: "";
+  display: block;
+  background: var(--border);
+}
 
 .container {
   width: min(1180px, 92%);
