@@ -82,21 +82,33 @@
 
   /* ---------- Animated Skill Bars ---------- */
   const skillBars = document.querySelectorAll(".progress span");
+  function animateSkill(bar) {
+    const w = parseInt(bar.getAttribute("data-width"), 10);
+    bar.style.width = w + "%";
+    const label = bar.closest(".skill-card").querySelector(".skill-percent");
+    if (label) {
+      const duration = 1400;
+      const start = performance.now();
+      function tick(now) {
+        const p = Math.min((now - start) / duration, 1);
+        label.textContent = Math.floor(p * w) + "%";
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+  }
   if ("IntersectionObserver" in window && skillBars.length) {
     const skillObs = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          const w = entry.target.getAttribute("data-width");
-          entry.target.style.width = w + "%";
+          animateSkill(entry.target);
           skillObs.unobserve(entry.target);
         }
       });
     }, { threshold: 0.4 });
     skillBars.forEach(function (bar) { skillObs.observe(bar); });
   } else {
-    skillBars.forEach(function (bar) {
-      bar.style.width = bar.getAttribute("data-width") + "%";
-    });
+    skillBars.forEach(animateSkill);
   }
 
   /* ---------- Animated Counters ---------- */

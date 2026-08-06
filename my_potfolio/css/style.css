@@ -8,6 +8,7 @@
   --primary: #6c5ce7;
   --primary-dark: #4834d4;
   --accent: #00cec9;
+  --light-purple: #b39ddb;
   --bg: #f5f6fa;
   --bg-alt: #ffffff;
   --surface: rgba(255, 255, 255, 0.65);
@@ -26,6 +27,7 @@
   --primary: #a29bfe;
   --primary-dark: #6c5ce7;
   --accent: #00cec9;
+  --light-purple: #c4b5fd;
   --bg: #0f1020;
   --bg-alt: #171833;
   --surface: rgba(255, 255, 255, 0.06);
@@ -280,7 +282,7 @@ img::after {
 .page-hero h1 {
   font-size: clamp(2rem, 5vw, 3.2rem);
   margin-bottom: 10px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background: linear-gradient(135deg, var(--light-purple), var(--primary));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -316,7 +318,7 @@ img::after {
 }
 .hero-text h2 {
   font-size: 1.1rem;
-  color: var(--accent);
+  color: var(--light-purple);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -448,6 +450,21 @@ img::after {
   margin-bottom: 14px;
   font-size: 1.15rem;
 }
+.skill-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.skill-head h3 {
+  margin-bottom: 0;
+  font-size: 1.15rem;
+}
+.skill-percent {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--light-purple);
+}
 .progress {
   height: 12px;
   background: var(--border);
@@ -542,7 +559,6 @@ img::after {
   background: var(--border);
   color: var(--text);
 }
-.project-btns { display: flex; gap: 12px; }
 
 /* ---------- Certification Cards ---------- */
 .cert-card {
