@@ -214,9 +214,20 @@
       else clearError(message.closest(".form-group"));
 
       if (valid) {
-        if (success) success.style.display = "block";
+        const to = "hoodapriyal0@gmail.com";
+        const subject = "Portfolio Contact - " + name.value.trim();
+        const body =
+          "Name: " + name.value.trim() + "\n" +
+          "Email: " + email.value.trim() + "\n" +
+          "Phone: " + phone.value.trim() + "\n\n" +
+          "Message:\n" + message.value.trim();
+        const mailto = "mailto:" + to +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
+        window.location.href = mailto;
+        if (success) { success.textContent = "✅ Opening your email app to send the message…"; success.style.display = "block"; }
         form.reset();
-        setTimeout(function () { if (success) success.style.display = "none"; }, 4000);
+        setTimeout(function () { if (success) { success.style.display = "none"; success.textContent = "✅ Thank you! Your message has been sent successfully."; } }, 5000);
       }
     });
   }
