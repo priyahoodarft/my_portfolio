@@ -1,0 +1,14 @@
+{
+  "name": "priya-portfolio-server",
+  "version": "1.0.0",
+  "description": "Local backend to send contact form messages directly via Gmail SMTP (no third party).",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.14"
+  }
+}

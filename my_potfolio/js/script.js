@@ -214,20 +214,34 @@
       else clearError(message.closest(".form-group"));
 
       if (valid) {
-        const to = "hoodapriyal0@gmail.com";
-        const subject = "Portfolio Contact - " + name.value.trim();
-        const body =
-          "Name: " + name.value.trim() + "\n" +
-          "Email: " + email.value.trim() + "\n" +
-          "Phone: " + phone.value.trim() + "\n\n" +
-          "Message:\n" + message.value.trim();
-        const mailto = "mailto:" + to +
-          "?subject=" + encodeURIComponent(subject) +
-          "&body=" + encodeURIComponent(body);
-        window.location.href = mailto;
-        if (success) { success.textContent = "✅ Opening your email app to send the message…"; success.style.display = "block"; }
-        form.reset();
-        setTimeout(function () { if (success) { success.style.display = "none"; success.textContent = "✅ Thank you! Your message has been sent successfully."; } }, 5000);
+        const btn = form.querySelector('button[type="submit"]');
+        if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+        if (success) success.style.display = "none";
+
+        fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: name.value.trim(),
+            email: email.value.trim(),
+            phone: phone.value.trim(),
+            message: message.value.trim()
+          })
+        })
+          .then(function (r) { return r.json().then(function (d) { return { ok: r.ok && d.ok, data: d }; }); })
+          .then(function (res) {
+            if (res.ok) {
+              if (success) { success.textContent = "✅ Thank you! Your message has been sent successfully."; success.style.display = "block"; }
+              form.reset();
+              setTimeout(function () { if (success) success.style.display = "none"; }, 5000);
+            } else {
+              alert("Failed to send: " + (res.data.error || "Please try again."));
+            }
+          })
+          .catch(function () { alert("Network error. Make sure the local server is running."); })
+          .finally(function () {
+            if (btn) { btn.disabled = false; btn.textContent = "Send Message"; }
+          });
       }
     });
   }
